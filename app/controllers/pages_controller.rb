@@ -8,13 +8,6 @@ def about
     
 end
 
-def chargeable
-    
-end
-
-def free
-    
-end
 
     
 end
