@@ -5,11 +5,17 @@ class ArticlesController < ApplicationController
     
     def create
        @article = Article.new(article_params)
-       @article.save
+      
+      if @article.save
+      flash[:notice] = "Ваш пост был удачно опубликован!"
+          reditect_to articles_path(@article)
+      else
+          render :new 
+      end
     end
     
     private
     def article_params
-       params.require(:title).permit(:title, :description) 
+       params.require(:article).permit(:title, :description) 
     end
 end
