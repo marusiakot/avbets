@@ -1,0 +1,19 @@
+<h1> Прогнозы на спорт </h1>
+
+<p> <%= link_to "Создать прогноз", new_article_path %></p>
+<table>
+    <tr>
+        <th> Title   </th>
+        <th> Description</th>
+    </tr>
+    
+<% @articles.each do |article| %>
+<tr>
+    <th><%= article.title %></th>
+    <th><%= article.description %></th>
+    <th><%= link_to "Редактировать", edit_article_path(article) %></th>
+    <th><%= link_to "Посмотреть полное описание", article_path(article) %></th>
+    <th><%= link_to "Удалить", article_path(article), method: :delete, data: {confirm: "Вы уверены?"} %> </th>
+</tr>
+    <% end %>
+</table>
