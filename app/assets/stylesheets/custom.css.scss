@@ -21,7 +21,9 @@ $navbar-default-bg: #2d306e;
 }
 
 .jumbotron {
-    
+    background-image: asset-url('club.jpg');
+    height: 330px;
+    width: 100%;
 }
 
 footer {
@@ -30,3 +32,14 @@ footer {
      border-top: 1px solid #eaeaea;
 }
 
+.jumbotron h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 5.5em ;
+    margin-top: -2px ;
+}
+
+.btn-huge {
+    width: 20px;
+    height: 20px;
+}
