@@ -7,11 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="collorpg">
+  <div class="content">
 <%= render 'layouts/navigation' %>
 <%= render 'layouts/messages' %>
 
 <div class="container">
   <%= yield %>
+</div>
 </div>
 
 <%= render 'layouts/footer' %>

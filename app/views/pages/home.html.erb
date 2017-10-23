@@ -58,61 +58,56 @@ div.tab button.active {
 </head>
 
 <body>
-<div class="center jumbotron imgf">
-<h1> A-club </h1>
 
-<%= link_to "Войти", "#", class: 'btn btn-primary btn-large btn-huge btn-shad' %>
+   <div class="center jumbotron imgf">
+       <h1> A-club </h1>
 
-</div>
+        <%= link_to "Войти", "#", class: 'btn btn-primary btn-large btn-huge btn-shad' %>
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Nhl')" id="defaultOpen">Hockey</button>
-  <button class="tablinks" onclick="openCity(event, 'Nba')">Basketball</button>
-  <button class="tablinks" onclick="openCity(event, 'Wta')">Tennis</button>
-  <button class="tablinks" onclick="openCity(event, 'Poker')">Poker</button>
-</div>
+    </div>
 
-<div id="Nhl" class="tabcontent">
-  <h3>NHL</h3>
-  <p>Do u like to watch NHL?</p>
-</div>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Nhl')" id="defaultOpen">Hockey</button>
+        <button class="tablinks" onclick="openCity(event, 'Nba')">Basketball</button>
+        <button class="tablinks" onclick="openCity(event, 'Wta')">Tennis</button>
+    </div>
 
-<div id="Nba" class="tabcontent">
-  <h3>NBA</h3>
-  <p>Do u like to watch NBA?</p> 
-</div>
+    <div id="Nhl" class="tabcontent">
+       <h3>NHL</h3>
+       <p>Do u like to watch NHL?</p>
+    </div>
 
-<div id="Wta" class="tabcontent">
-  <h3>WTA</h3>
-  <p>Girls tennis thats amazing, u're right?</p>
-</div>
+    <div id="Nba" class="tabcontent">
+      <h3>NBA</h3>
+      <p>Do u like to watch NBA?</p> 
+    </div>
 
-<div id="Poker" class="tabcontent">
-  <h3>Poker</h3>
-  <p>Poker thats more that life</p>
-</div>
+    <div id="Wta" class="tabcontent">
+      <h3>WTA</h3>
+      <p>Girls tennis thats amazing, u're right?</p>
+    </div>
 
-<script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+
+    <script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
 
 
-<div class="empty_inner" style=""> 
-<p> ----</p>
-<p> -----</p></div>
+    
+
 </body>
