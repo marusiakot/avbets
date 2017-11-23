@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
        @article = Article.new(article_params)
       
       if @article.save
-      flash[:notice] = "Ваш пост был удачно опубликован!"
+      flash[:success] = "Ваш пост был удачно опубликован!"
           redirect_to articles_path(@article)
       else
           render :new 
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 def update
    
         if @article.update(article_params)
-            flash[:notice] = "Article was successfully updated"
+            flash[:success] = "Article was successfully updated"
             redirect_to article_path(@article)
         else
             render 'edit'
@@ -44,7 +44,7 @@ end
 
         @article.destroy
         
-        flash[:notice] = "Пост был успешно удален!"
+        flash[:success] = "Пост был успешно удален!"
         redirect_to articles_path
     end
     

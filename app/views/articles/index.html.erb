@@ -1,14 +1,13 @@
-<head></
 
-<h1> Прогнозы на спорт </h1>
 
-<p> <%= link_to "Создать прогноз", new_article_path %></p>
-<table>
-    <tr>
-        <th> Title   </th>
-        <th> Description</th>
-    </tr>
+
+<%= link_to "Создать прогноз", new_article_path, class: "btn btn-success btn-xs" %>
+
+<h1 align="center">Наши прогнозы</h1>
+<%= render 'article', obj: @articles %>
     
+
+
 <% @articles.each do |article| %>
 <tr>
     <th><%= article.title %></th>
