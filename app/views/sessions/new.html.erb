@@ -1,5 +1,37 @@
-<h1 align="center">Log in</h1>
+<head>
+    <style>
+        .h1local {
+            margin-top: 90px;
+        }
+        
+        h1 {
+              color: white;
+              text-align: center;
+              padding-bottom: 25px;
+              font-family: Georgia, "Times New Roman", Times, serif;
+              font-weight: 700;
+              font-size: 2.75em;
+              background: rgb(38, 36, 48);
+              margin-top: 10px;
+              padding-top: 12px;
+        }    
+        
+        .logfield {
+            padding-top: 30px;
+            margin-top: 20px;
+            border: 2px solid rgb(38, 36, 48);
+            padding-bottom: 30px;
+        }
+        
+      
+    </style>
+</head>
+<body>
+<div class="h1local">
+    <h1 align="center">Добро пожаловать!</h1>
+</div>    
 
+<div class="logfield">
 <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
 
 <div class="form-group">
@@ -25,6 +57,9 @@
     </div>
 </div>
 <% end %>
-<div class="col-xs-4 col-xs-offset-4">
+<div class="col-xs-5 col-xs-offset-5">
     [ <%= link_to "Вернуться к прогнозам", articles_path %> ]
 </div>
+</div>
+
+</body>

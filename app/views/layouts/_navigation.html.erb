@@ -19,20 +19,24 @@
         <li><%= link_to "Статистика", statistic_path, id: "naver" %></li>
         <% if logged_in? %>
       <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Profile<span class="caret"></span></a>
+      <a href="#" id="naver" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ваш профиль<span class="caret"></span></a>
       <ul class="dropdown-menu">
+        <% if logged_in? and current_user.admin? %>
       <li><%= link_to "Изменить профиль", edit_user_path(current_user) %></li>
+        <% end %>
       <li><%= link_to "Посмотреть профиль", user_path(current_user) %></li>
       <li><%= link_to 'Выйти из акканута', logout_path, method: :delete %></li>
       <li><%= "Admin" if current_user.admin? %></li>
     </ul>
   </li>
   <% else %>
-  <li><%= link_to 'Вход', login_path %></li>
-  <li><%= link_to 'Регистрация', signup_path %></li>
+  <li><%= link_to 'Вход', login_path, id: "naver" %></li>
+  <li><%= link_to 'Регистрация', signup_path, id: "naver" %></li>
 <% end %>
+
+<% if logged_in? and current_user.admin? %>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+  <a href="#" id="naver" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Категории <span id="naver" class="caret"></span></a>
   <ul class="dropdown-menu">
   <li><%= link_to "Все категории", categories_path %></li>
     <% Category.all.each do |category| %>
@@ -42,16 +46,11 @@
 <li role="separator" class="divider"></li>
   <li><%= link_to "Создать категорию", new_category_path %></li>
 <% end %>
+<% end %>
   </ul>
   </li>
 </ul>
      
-<form class="navbar-form navbar-left" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
 
      
      

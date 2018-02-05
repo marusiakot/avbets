@@ -1,18 +1,42 @@
+<head>
+<style>
+ .betxt {
+     margin-top: 90px;
+ }  
 
-<h1 align="center" style="color: white; 
+h1 {
+    color: white;
   text-align: center;
- // box-shadow: 5px 5px 10px rgba(232, 239, 236,.9);
- padding-bottom: 25px;
+  padding-bottom: 25px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-size: 2.75em;
   background: rgb(38, 36, 48);
-  margin-top: 70px;
-  padding-top: 12px;">Наши прогнозы</h1>
+  margin-top: 40px;
+  padding-top: 12px;
+  margin-bottom: 60px;
+}    
+
+.yzor {
+    border: 2px solid rgb(10,10,10);
+   
+}
+
+hr {
+    box-shadow: 3px 3px 7px rgba(0,0,0,.9);
+}
+</style>
+    
+</head>
+<body>
+<div class="betxt">
+    <h1 align="center">Наши прогнозы</h1>
+</div>    
+
 
 
     
-        
+        <% if logged_in? and current_user.admin? %>
         <%= link_to "Создать прогноз", new_article_path, class: "btn btn-success btn-xs art-btn center" %>
         <div align="center">
         <%= will_paginate %>
@@ -21,19 +45,34 @@
         <div align="center">
         <%= will_paginate %>
         </div>
+        <% end %>
         
-        
-   
-   
-        <% @articles.each do |article| %>
-        <tr>
-            <th><%= article.title %></th>
-            <th><%= article.description %></th>
-            <th><%= link_to "Редактировать", edit_article_path(article) %></th>
-            <th><%= link_to "Посмотреть полное описание", article_path(article) %></th>
-            <th><%= link_to "Удалить", article_path(article), method: :delete, data: {confirm: "Вы уверены?"} %> </th>
-        </tr>
-            <% end %>
-        </table>
-
+<div class="center">    
+    <%= will_paginate %> 
+</div>    
+       <div class="container">     
+           <div class="well col-xs-8 col-xs-offset-2">
+               <hr>
+            <table>   
+            <tr>
+            <th><%= render 'article', obj: @articles %></th>
+            <th><% @articles.each do |article| %></th>
+            </tr>
+            <tr>
+                
+                <% if logged_in? and current_user.admin? %>
+                <th><%= link_to "Редактировать", edit_article_path(article) %></th>
+                <th><%= link_to "Удалить", article_path(article), method: :delete, data: {confirm: "Вы уверены?"} %> </th>
+                <% end %>
+            </tr>
+            
+                <% end %>
+            </table>
+            <hr>
+            </div>
+    </div>
+<div class="center">    
+    <%= will_paginate %> 
+</div>    
+</body>
 

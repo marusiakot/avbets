@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     
     def create
        @article = Article.new(article_params)
-       @article.user = current_user
+       ##@article.user = current_user
           if @article.save
           flash[:success] = "Ваш пост был удачно опубликован!"
               redirect_to article_path(@article)

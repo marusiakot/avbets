@@ -37,23 +37,37 @@ body {
     margin-top: 30px;
 }
 
-.analitics img {
+img {
     border: 1px solid black;
     border-radius: 50%;
     
 }
 
 .vladimir {
-    float: left;
+   float: left;
 }
 
 .anton {
-    float: right;
+  float: right;
 }
 
 .fedor {
-    margin-left: 378px;
+ margin-left: 380px;
 }
+.dima {
+    float: left;
+}
+
+.dobre {
+    float: right;
+    padding-left: 10px;
+}
+
+.aclublogo {
+     margin-left: 380px;
+}
+
+
 
 .analitics p {
     max-width: 270px;
@@ -61,6 +75,12 @@ body {
     font-weight: bold;
     margin-top: 15px;
     font-size: 1.1em;
+}
+
+#imgaclub {
+    border: 3px solid black;
+    box-shadow: 5px 5px 12px rgba(0,0,0,.6);
+    border-radius: none;
 }
 </style>
 
@@ -76,6 +96,7 @@ body {
 </div>
 
     <div class="analitics">
+        
         <div class="vladimir">
         <%= image_tag("vladimir.jpg", :alt => "Vladimir", :height => "250px", :width => "250px") %>
         <p> Владимир, специалист NBA и WTA
@@ -89,9 +110,28 @@ body {
         <%= image_tag("fedor.jpg", :alt => "Fedor", :height => "250px", :width => "250px") %>
         <p> Федор, специалист NHL и матчей сборных команд по хоккею </p>
         </div>
+        
+        <div class='dobre'>
+        <%= image_tag("dobre.jpg", :alt => "Dobre", :height => "250px", :width => "250px") %>
+        <p> Добрыня, специалист КХЛ и SHL </p>
+        </div>
+        <div class="dima">
+        <%= image_tag("dima.jpg", :alt => "Dmitry", :height => "250px", :width => "250px") %>
+        <p> Дмитрий, специалист по футболу и смешанным единоборствам </p>
+        </div>
+        
+         <div class="aclublogo">
+        <%= image_tag("aclub.jpg", :alt => "Fedor", :height => "250px", :width => "250px", :id => "imgaclub") %>
+        </div>
     </div>
     
     <div class="contacts">
         
+    
+        
     </div>    
+    
+    <footer>
+        
+    </footer>
 </body>

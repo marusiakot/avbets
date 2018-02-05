@@ -29,22 +29,28 @@ $navbar-default-bg: black;
 }
 
 .footer {
-  padding-top: -15px;
+ // padding-top: -15px;
 //border-top: 1px solid #eaeaea;
- position: absolute;
+ position: sticky;
     left: 0;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     background-color: black;
     text-align: left;
     color: white;
     height: 50px;
     margin-top: 50px;
-    
+    height: 90px;
 }
 
     
-
+.footer img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin: 20px 0px 20px 45px;
+    
+}
 
 
 
