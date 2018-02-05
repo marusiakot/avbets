@@ -6,8 +6,8 @@ $navbar-default-bg: black;
 
 
 .collorpg {
-    background-color: black;
-}
+    background: rgb(225, 231, 232);
+} 
 
 #logo {
     color: white;
@@ -23,11 +23,7 @@ $navbar-default-bg: black;
     text-align: center;
 }
 
-.jumbotron {
-    background-image: asset-url('club.jpg');
-    height: 330px;
-    width: 100%;
-}
+
 .btn-shad {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
@@ -45,30 +41,12 @@ $navbar-default-bg: black;
     height: 50px;
     margin-top: 50px;
     
+}
 
     
-    
-}
 
-.jumbotron h1 {
-    color: white;
-    font-weight: bold;
-    font-size: 5.5em ;
-    margin-top: -2px ;
-}
 
-.btn-huge {
-    font-size: 2em;
-    background-color: #2d306e;
-}
 
-.prenhl {
-    width: 620px;
-    height: 140px;
-    padding: 10px;
-    border: 1px solid gray;
-    margin: 0; 
-}
 
 #naver {
     color: white;
@@ -105,7 +83,17 @@ $navbar-default-bg: black;
 
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - 
+
+h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    
+}
+
+
+// ----------------------------------------
+
+//  - - - - - - - - - - - - - - - - - - - - - - - 
 .navbar {
    position: absolute;
     width: 100%;
@@ -227,3 +215,44 @@ html {
   margin: 0 auto;
   background: black;
   }
+  
+ .art-pos {
+     position: relative;
+ }
+ 
+
+ #h1bet {
+     margin-top: 55px;
+     color: lightblue;
+ }
+ 
+ .zzz3 {
+     background: asset-url("b1r.jpg");
+ }
+ 
+ 
+ .analitics {
+     padding-top: 20px;
+ }
+ 
+.table tr th {
+   color: white;
+}
+
+
+//-----------------------------------------------------------------
+
+.badge {
+    background-color: #CEF6F5;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.input_checkbox input {
+    width: auto !important;
+}
+
+// _category.html styles
+
+//------------------------------------------------------------------
