@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 before_action :set_user, only: [:edit, :update, :show]
 before_action :require_same_user, only: [:edit, :update]
 before_action :require_admin, only: [:destroy]
+before_action :require_same_user_show, only: [:show]
 
 def new
     @user = User.new
@@ -30,7 +31,7 @@ end
 def update
   
     if @user.update(user_params)
-        flash[:success] = "Your account was updated successfully"
+        flash[:success] = "Ваши данные были изменены успешно"
         redirect_to articles_path
     else
         render 'edit'
@@ -69,6 +70,13 @@ def require_admin
     if logged_in? and !current_user.admin?
         flash[:danger] = "Only admin users can perform that action"
         redirect_to root_path
+    end
+end
+
+def require_same_user_show
+    if current_user != @user
+    flash[:danger] = "Авторизуйтесь чтобы посмотреть свой профиль"
+    redirect_to root_path
     end
 end
 
