@@ -1,5 +1,12 @@
 <head>
+   
     <style>
+        
+       
+        * {
+            box-sizing: border-box;
+        }
+        
         .tovar {
             margin-top: 70px;
             border:3px solid gray;
@@ -39,21 +46,110 @@
             color: gold;
             text-align: center;
         }
+        
+        .programs {
+            margin-top: 90px;
+            float: left;
+            width: 930px
+        }
+        
+        .programs img {
+            height: 200px;
+            width: 35%;
+            float: left;
+            box-shadow: 0px 0px 13px rgba(7, 14, 7, 0.6);
+        }
+        
+        .programs li {
+            margin-left: 45%;
+            line-height: 1.5px;
+            font-weight: bold;
+        }
+        
+        .programs h4 {
+            margin-bottom: 19px;
+            font-weight: bold;
+        }
+        #h4p {
+            list-style-type: none;
+            color: green;
+            
+        }
+        
+        #h4m {
+            list-style-type: none;
+            color: red;
+            
+        }
+        
+        .leon  {
+            padding-top: 30px;
+            border-bottom: 2px solid black;
+            padding-bottom: 30px;
+        }
+        
+        .xstavka {
+            padding-bottom: 30px;
+            border-bottom: 2px solid black;
+        }
+        
+    
+        p {
+            font-family: 'PT Sans Caption', sans-serif;
+              font-size: .8em
+        }
     </style>
 </head>
 
-<div class='tovar'>
-        <h3> Подписки </h3>
-        <li><%= link_to image_tag('1.jpg'), 'https://vk.com/market-161163097?w=product-161163097_2188956%2Fquery', :target => "_blank" %></li>
-        <li><%= link_to image_tag('2.jpg'), 'https://vk.com/market-161163097?w=product-161163097_2188959%2Fquery', :target => "_blank" %></li>
-        <li><%= link_to image_tag('3.jpg'), 'https://vk.com/market-161163097?w=product-161163097_2188961%2Fquery', :target => "_blank" %></li>    
-        <hr>
-        <h3> Правила </h3>
-        <li><%= link_to image_tag('faq.jpg'), 'vk.com/@aclubet-faqa-club', :target => "_blank" %></li>
-        <li><%= link_to image_tag('rules.png'), 'https://vk.com/topic-161163097_39174262', :target => "_blank" %></li>
-       
+<div class="programs">
+    <div class="xstavka">
+         <%= link_to image_tag('1xSt.jpg'), 'https://aff1xstavka.top/L?tag=s_57451m_1341c_&site=57451&ad=1341', :target => "_blank" %>
+         <li id="h4p"> <h4> Плюсы </h4> </li>
+         <li> Высокие коэффициенты </li>
+         <br/>
+         <li>Широкая и глубокая линия с максимально вариативной росписью</li>
+         <br/>
+         <li> Отличное предложение ставок Live </li>
+         <br/>
+         <li> Легальный букмекер в РФ </li>
+         <br/>
+         <li> Бонус за регистрацию 2000</li>
+         <br/> 
+         <li id="h4m"> <h4> Минусы </h4> </li>
+         <li> Налог на ставки </li>
+    </div>
+     <div class="leon">
+         <%= link_to image_tag('http://cdn.leon.ru/adv/ln/leonrus/300x250-ver2.gif?t=79'), 'https://www.leon.ru/?wm=63321235', :target => "_blank" %>
+         <li id="h4p"> <h4> Плюсы </h4> </li>
+         <li> Быстрый вывод средств </li>
+         <br/>
+         <li> Широкая и глубокая линия с максимально вариативной росписью</li>
+         <br/>
+         <li> Отличное предложение ставок Live </li>
+         <br/>
+         <li> Отличная программа лояльности </li>
+         <br/>
+         <li> Бонус на депозит 3999 </li>
+         <br/> 
+         <li id="h4m"> <h4> Минусы </h4> </li>
+         <li> Заниженные коэффиценты на Live события </li>
+    </div>
 </div>
 
-<div class="change">
-     <li><%= link_to "Изменить профиль", edit_user_path(current_user), class: "btn btn-md btn-primary" %></li>
+<div class='tovar'>
+        
+        <h3> Подписки </h3>
+        <li id="bcknum"><%= link_to image_tag('1st.jpg'), 'https://vk.com/market-161163097?w=product-161163097_2188956%2Fquery', :target => "_blank" %></li>
+        <li id="bcknum"><%= link_to image_tag('2nd.jpg'), 'https://vk.com/market-161163097?w=product-161163097_2188959%2Fquery', :target => "_blank" %></li>
+        <li id="bcknum"><%= link_to image_tag('3rd.jpg'), 'https://vk.com/market-161163097?w=product-161163097_2188961%2Fquery', :target => "_blank" %></li>   
+       
+        <hr>
+        <h3> Правила </h3>
+        <li><%= link_to image_tag('fag.png'), 'vk.com/@aclubet-faqa-club', :target => "_blank" %></li>
+        <li><%= link_to image_tag('book.png'), 'https://vk.com/topic-161163097_39174262', :target => "_blank" %></li>
+        <li><%= link_to image_tag('change.png'), edit_user_path(current_user), class: "changer" %></li>
 </div>
+
+
+
+       
